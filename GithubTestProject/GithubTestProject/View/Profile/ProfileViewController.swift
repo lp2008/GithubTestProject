@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class ProfileViewController: UIViewController {
 
@@ -20,12 +22,21 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    let cellIdentifier = "RepoTableViewCell"
+    let disposeBag = DisposeBag()
     var viewModel: ProfileViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         userNameLabel.text = viewModel.user?.login
+        
+        tableView.register(UINib(nibName: cellIdentifier, bundle: nil), forCellReuseIdentifier: cellIdentifier)
+        
+        viewModel.repoItems.asObservable().bind(to: tableView.rx.items(cellIdentifier: cellIdentifier, cellType: RepoTableViewCell.self)) { index, item, cell in
+            cell.configure(viewModel: item)
+            cell.selectionStyle = .none
+            }.disposed(by: disposeBag)
     }
 
 }

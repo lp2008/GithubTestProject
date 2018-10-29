@@ -24,4 +24,9 @@ class RepoTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func configure(viewModel: RepoViewModel) {
+        repoNameLabel.text = viewModel.repo?.fullName
+        starCountLabel.text = "\(viewModel.repo?.stargazersCount ?? 0)"
+    }
+    
 }
