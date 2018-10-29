@@ -13,6 +13,7 @@ import RxCocoa
 class ProfileViewController: UIViewController {
 
     @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var cardView: UIView!
     
     @IBAction func battleButtonAction(_ sender: Any) {
     }
@@ -30,6 +31,12 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
 
         userNameLabel.text = viewModel.user?.login
+        
+        cardView.layer.cornerRadius = 5
+        cardView.layer.masksToBounds = true
+        cardView.layer.borderColor = UIColor.gray.cgColor
+        cardView.layer.borderWidth = 1
+        cardView.backgroundColor = .white
         
         tableView.register(UINib(nibName: cellIdentifier, bundle: nil), forCellReuseIdentifier: cellIdentifier)
         
