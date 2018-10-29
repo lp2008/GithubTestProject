@@ -29,7 +29,8 @@ class ViewController: UIViewController {
         tableView.register(UINib(nibName: cellIdentifier, bundle: nil), forCellReuseIdentifier: cellIdentifier)
         
         viewModel.trendingItems.asObservable().bind(to: tableView.rx.items(cellIdentifier: cellIdentifier, cellType: TrendingTableViewCell.self)) { index, item, cell in
-            cell.configure(withViewModel: item)
+                cell.configure(withViewModel: item)
+                cell.selectionStyle = .none
             }.disposed(by: disposeBag)
     }
 
