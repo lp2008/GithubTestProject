@@ -47,4 +47,40 @@ class ApiService {
             }
         })
     }
+    
+    /*
+     * MARK:- Get Login Data To Server
+     * @discussion
+     * @params URL, User Name, Password
+     * @return Observable<Any>
+     */
+    
+    func getLoginDataFromServer(userName: String, password: String) -> ResponseData {
+        
+        let url = URL(string: ApiEndpoints.userLoginURL)
+        let credentialData = "\(userName):\(password)".data(using: String.Encoding.utf8)!
+        let base64Credentials = credentialData.base64EncodedString()
+        let headers = ["Authorization": "Basic \(base64Credentials)"]
+        
+        return Observable.create({ (observer) -> Disposable in
+            let request = Alamofire.request(url!, headers: headers).responseJSON(completionHandler: { (responseData) in
+                switch(responseData.result) {
+                case .success(let value):
+                    if let statusCode = responseData.response?.statusCode, statusCode == 200 {
+                        observer.onNext(value)
+                        observer.onCompleted()
+                    } else {
+                        print("This is not the expected response")
+                    }
+                    break
+                case.failure(let error):
+                    observer.onError(error)
+                    break
+                }
+            })
+            return Disposables.create {
+                request.cancel()
+            }
+        })
+    }
 }

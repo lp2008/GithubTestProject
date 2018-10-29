@@ -25,6 +25,8 @@
 		17CFE559218734A5006E5063 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CFE557218734A5006E5063 /* SigninViewController.swift */; };
 		17CFE55A218734A5006E5063 /* SigninViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17CFE558218734A5006E5063 /* SigninViewController.xib */; };
 		17CFE55C218734BD006E5063 /* SigninViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CFE55B218734BD006E5063 /* SigninViewModel.swift */; };
+		17E828DE218750C100C7804A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E828DD218750C100C7804A /* User.swift */; };
+		17E828E0218750DC00C7804A /* Plan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E828DF218750DC00C7804A /* Plan.swift */; };
 		A1445C01C57EB6B64E9A2196 /* Pods_GithubTestProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66222C41F32FBD0968492DDB /* Pods_GithubTestProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +51,8 @@
 		17CFE557218734A5006E5063 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		17CFE558218734A5006E5063 /* SigninViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SigninViewController.xib; sourceTree = "<group>"; };
 		17CFE55B218734BD006E5063 /* SigninViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewModel.swift; sourceTree = "<group>"; };
+		17E828DD218750C100C7804A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		17E828DF218750DC00C7804A /* Plan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plan.swift; sourceTree = "<group>"; };
 		3F08E85A7F44441382D7AA98 /* Pods-GithubTestProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubTestProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GithubTestProject/Pods-GithubTestProject.debug.xcconfig"; sourceTree = "<group>"; };
 		66222C41F32FBD0968492DDB /* Pods_GithubTestProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubTestProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE0A9BE39555EF122E044427 /* Pods-GithubTestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubTestProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-GithubTestProject/Pods-GithubTestProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -102,14 +106,8 @@
 		17CFE53B21870AAB006E5063 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				17CFE53E21870ADB006E5063 /* TrendingTableViewCell.swift */,
-				17CFE53F21870ADB006E5063 /* TrendingTableViewCell.xib */,
-				176EC4FF2186FD21001BC3C2 /* ViewController.swift */,
-				176EC5012186FD21001BC3C2 /* Main.storyboard */,
-				17CFE5532187319D006E5063 /* BuiltByCollectionViewCell.swift */,
-				17CFE5542187319D006E5063 /* BuiltByCollectionViewCell.xib */,
-				17CFE557218734A5006E5063 /* SigninViewController.swift */,
-				17CFE558218734A5006E5063 /* SigninViewController.xib */,
+				17E828E2218750F600C7804A /* Signin */,
+				17E828E1218750E400C7804A /* Trending */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -117,8 +115,8 @@
 		17CFE53C21870AB2006E5063 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				17CFE5422187143C006E5063 /* Trending.swift */,
-				17CFE54421871450006E5063 /* BuiltBy.swift */,
+				17E828DC218750AB00C7804A /* User */,
+				17E828DB218750A000C7804A /* Trending */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -140,6 +138,46 @@
 				17CFE549218714B7006E5063 /* ApiService.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		17E828DB218750A000C7804A /* Trending */ = {
+			isa = PBXGroup;
+			children = (
+				17CFE5422187143C006E5063 /* Trending.swift */,
+				17CFE54421871450006E5063 /* BuiltBy.swift */,
+			);
+			path = Trending;
+			sourceTree = "<group>";
+		};
+		17E828DC218750AB00C7804A /* User */ = {
+			isa = PBXGroup;
+			children = (
+				17E828DD218750C100C7804A /* User.swift */,
+				17E828DF218750DC00C7804A /* Plan.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		17E828E1218750E400C7804A /* Trending */ = {
+			isa = PBXGroup;
+			children = (
+				17CFE5532187319D006E5063 /* BuiltByCollectionViewCell.swift */,
+				17CFE5542187319D006E5063 /* BuiltByCollectionViewCell.xib */,
+				17CFE53E21870ADB006E5063 /* TrendingTableViewCell.swift */,
+				17CFE53F21870ADB006E5063 /* TrendingTableViewCell.xib */,
+				176EC4FF2186FD21001BC3C2 /* ViewController.swift */,
+				176EC5012186FD21001BC3C2 /* Main.storyboard */,
+			);
+			path = Trending;
+			sourceTree = "<group>";
+		};
+		17E828E2218750F600C7804A /* Signin */ = {
+			isa = PBXGroup;
+			children = (
+				17CFE557218734A5006E5063 /* SigninViewController.swift */,
+				17CFE558218734A5006E5063 /* SigninViewController.xib */,
+			);
+			path = Signin;
 			sourceTree = "<group>";
 		};
 		462C88F5F278E699DD1F3E99 /* Frameworks */ = {
@@ -286,7 +324,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17E828DE218750C100C7804A /* User.swift in Sources */,
 				17CFE55C218734BD006E5063 /* SigninViewModel.swift in Sources */,
+				17E828E0218750DC00C7804A /* Plan.swift in Sources */,
 				17CFE5552187319D006E5063 /* BuiltByCollectionViewCell.swift in Sources */,
 				17CFE5432187143C006E5063 /* Trending.swift in Sources */,
 				17CFE559218734A5006E5063 /* SigninViewController.swift in Sources */,

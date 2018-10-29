@@ -10,6 +10,7 @@ import Foundation
 
 class ApiEndpoints {
     
-    static let baseURL = ""
+    static let baseURL = "https://api.github.com"
     static let trendingURL = "https://github-trending-api.now.sh/repositories?since=weekly"
+    static let userLoginURL = ApiEndpoints.baseURL + "/user"
 }

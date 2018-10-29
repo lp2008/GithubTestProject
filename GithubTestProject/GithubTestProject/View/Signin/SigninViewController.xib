@@ -11,6 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SigninViewController" customModule="GithubTestProject" customModuleProvider="target">
             <connections>
+                <outlet property="cardView" destination="hJz-tD-8k6" id="8uh-g3-Ss0"/>
+                <outlet property="passwordTextField" destination="qU8-Q9-hmk" id="6F0-XN-mlP"/>
+                <outlet property="signinButton" destination="Ouw-aY-WOz" id="svM-KD-Mk8"/>
+                <outlet property="userNameTextField" destination="Jgh-OG-SoS" id="WLs-9Z-enD"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -57,7 +61,7 @@
                             <rect key="frame" x="16" y="126" width="311" height="30"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ouw-aY-WOz">
                             <rect key="frame" x="16" y="180" width="311" height="40"/>
