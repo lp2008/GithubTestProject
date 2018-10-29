@@ -10,6 +10,9 @@
 		17683964218758BB00143D14 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17683962218758BB00143D14 /* ProfileViewController.swift */; };
 		17683965218758BB00143D14 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17683963218758BB00143D14 /* ProfileViewController.xib */; };
 		1768396721875AEC00143D14 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1768396621875AEC00143D14 /* ProfileViewModel.swift */; };
+		1768396921875B4D00143D14 /* RepoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1768396821875B4D00143D14 /* RepoViewModel.swift */; };
+		1768396C21875B9100143D14 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1768396B21875B9100143D14 /* Repo.swift */; };
+		1768396E21875BB800143D14 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1768396D21875BB800143D14 /* Owner.swift */; };
 		176EC4FE2186FD21001BC3C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176EC4FD2186FD21001BC3C2 /* AppDelegate.swift */; };
 		176EC5002186FD21001BC3C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176EC4FF2186FD21001BC3C2 /* ViewController.swift */; };
 		176EC5032186FD21001BC3C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 176EC5012186FD21001BC3C2 /* Main.storyboard */; };
@@ -37,6 +40,9 @@
 		17683962218758BB00143D14 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		17683963218758BB00143D14 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		1768396621875AEC00143D14 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		1768396821875B4D00143D14 /* RepoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewModel.swift; sourceTree = "<group>"; };
+		1768396B21875B9100143D14 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		1768396D21875BB800143D14 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		176EC4FA2186FD21001BC3C2 /* GithubTestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubTestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		176EC4FD2186FD21001BC3C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		176EC4FF2186FD21001BC3C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +91,15 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		1768396A21875B8500143D14 /* Repo */ = {
+			isa = PBXGroup;
+			children = (
+				1768396B21875B9100143D14 /* Repo.swift */,
+				1768396D21875BB800143D14 /* Owner.swift */,
+			);
+			path = Repo;
+			sourceTree = "<group>";
+		};
 		176EC4F12186FD21001BC3C2 = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +146,7 @@
 		17CFE53C21870AB2006E5063 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1768396A21875B8500143D14 /* Repo */,
 				17E828DC218750AB00C7804A /* User */,
 				17E828DB218750A000C7804A /* Trending */,
 			);
@@ -144,6 +160,7 @@
 				17CFE54D2187172F006E5063 /* TrendingItemViewModel.swift */,
 				17CFE55B218734BD006E5063 /* SigninViewModel.swift */,
 				1768396621875AEC00143D14 /* ProfileViewModel.swift */,
+				1768396821875B4D00143D14 /* RepoViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -342,9 +359,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1768396E21875BB800143D14 /* Owner.swift in Sources */,
 				17E828DE218750C100C7804A /* User.swift in Sources */,
 				17CFE55C218734BD006E5063 /* SigninViewModel.swift in Sources */,
 				17E828E0218750DC00C7804A /* Plan.swift in Sources */,
+				1768396C21875B9100143D14 /* Repo.swift in Sources */,
 				17CFE5552187319D006E5063 /* BuiltByCollectionViewCell.swift in Sources */,
 				17CFE5432187143C006E5063 /* Trending.swift in Sources */,
 				17CFE559218734A5006E5063 /* SigninViewController.swift in Sources */,
@@ -354,6 +373,7 @@
 				176EC4FE2186FD21001BC3C2 /* AppDelegate.swift in Sources */,
 				17CFE54E2187172F006E5063 /* TrendingItemViewModel.swift in Sources */,
 				17CFE54021870ADB006E5063 /* TrendingTableViewCell.swift in Sources */,
+				1768396921875B4D00143D14 /* RepoViewModel.swift in Sources */,
 				17683964218758BB00143D14 /* ProfileViewController.swift in Sources */,
 				17CFE54A218714B7006E5063 /* ApiService.swift in Sources */,
 				1768396721875AEC00143D14 /* ProfileViewModel.swift in Sources */,

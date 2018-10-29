@@ -1,5 +1,5 @@
 //
-//  ProfileViewModel.swift
+//  RepoViewModel.swift
 //  GithubTestProject
 //
 //  Created by Shohan Rahman on 10/29/18.
@@ -8,10 +8,10 @@
 
 import Foundation
 
-class ProfileViewModel {
+class RepoViewModel {
+    var repo: Repo?
     
-    
-    init() {
-        
+    init(repo: Repo?) {
+        self.repo = repo
     }
 }
