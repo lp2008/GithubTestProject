@@ -20,6 +20,9 @@ class TrendingTableViewCell: UITableViewCell {
     @IBOutlet weak var builtByCollectionView: UICollectionView!
     @IBOutlet weak var todaysStarLabel: UILabel!
     
+    fileprivate let cellIdentifier = "BuiltByCollectionViewCell"
+    fileprivate var builtByArray: [BuiltBy]?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -29,6 +32,11 @@ class TrendingTableViewCell: UITableViewCell {
         starButton.layer.masksToBounds = true
         starButton.layer.borderColor = UIColor.gray.cgColor
         starButton.layer.borderWidth = 1
+        
+        builtByCollectionView.dataSource = self
+        builtByCollectionView.delegate = self
+        
+        builtByCollectionView.register(UINib(nibName: cellIdentifier, bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -50,6 +58,33 @@ class TrendingTableViewCell: UITableViewCell {
         numberOfStarsLabel.text = "\(viewModel.trending?.stars ?? 0)"
         numberOfForksLabel.text = "\(viewModel.trending?.forks ?? 0)"
         todaysStarLabel.text = "\(viewModel.trending?.currentPeriodStars ?? 0) stars today"
+        builtByArray = viewModel.trending?.builtBy
+        builtByCollectionView.reloadData()
     }
     
+}
+
+extension TrendingTableViewCell: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if let count = builtByArray?.count {
+            return count
+        }
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! BuiltByCollectionViewCell
+        if let urlString = builtByArray?[indexPath.row].avatar {
+            cell.configure(urlString: urlString)
+        }
+        return cell
+    }
+}
+
+extension TrendingTableViewCell: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 40, height: 40)
+    }
 }
