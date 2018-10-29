@@ -10,7 +10,7 @@ import Foundation
 import ObjectMapper
 
 
-class RootClass : NSObject, NSCoding, Mappable{
+class Trending : NSObject, NSCoding, Mappable{
     
     var author : String?
     var builtBy : [BuiltBy]?
@@ -24,7 +24,7 @@ class RootClass : NSObject, NSCoding, Mappable{
     
     
     class func newInstance(map: Map) -> Mappable?{
-        return RootClass()
+        return Trending()
     }
     required init?(map: Map){}
     private override init(){}

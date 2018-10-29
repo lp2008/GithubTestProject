@@ -187,6 +187,17 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="builtByCollectionView" destination="iW7-4R-gMS" id="fvK-Uy-FKR"/>
+                <outlet property="descriptionLabel" destination="Yx7-GH-oMs" id="E6K-Pe-qby"/>
+                <outlet property="languageLabel" destination="Phd-0x-0q5" id="WyX-OR-OfG"/>
+                <outlet property="languageView" destination="FRS-lJ-MoY" id="Vwj-l6-xdh"/>
+                <outlet property="numberOfForksLabel" destination="jVx-ZD-0CQ" id="7Rg-SN-A3H"/>
+                <outlet property="numberOfStarsLabel" destination="Nun-15-6DV" id="Gq1-Pg-g9y"/>
+                <outlet property="starButton" destination="t1l-D2-hjO" id="8VA-Aq-axM"/>
+                <outlet property="todaysStarLabel" destination="omX-XT-FyU" id="ubO-1O-9jt"/>
+                <outlet property="userNameLabel" destination="Ktx-pX-tXp" id="lIV-4E-Pj1"/>
+            </connections>
             <point key="canvasLocation" x="218.40000000000001" y="216.34182908545728"/>
         </tableViewCell>
     </objects>
