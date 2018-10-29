@@ -33,6 +33,7 @@
 		17CFE559218734A5006E5063 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CFE557218734A5006E5063 /* SigninViewController.swift */; };
 		17CFE55A218734A5006E5063 /* SigninViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17CFE558218734A5006E5063 /* SigninViewController.xib */; };
 		17CFE55C218734BD006E5063 /* SigninViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CFE55B218734BD006E5063 /* SigninViewModel.swift */; };
+		17D32FB02187896F001C322C /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D32FAF2187896F001C322C /* Utilities.swift */; };
 		17E828DE218750C100C7804A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E828DD218750C100C7804A /* User.swift */; };
 		17E828E0218750DC00C7804A /* Plan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E828DF218750DC00C7804A /* Plan.swift */; };
 		A1445C01C57EB6B64E9A2196 /* Pods_GithubTestProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66222C41F32FBD0968492DDB /* Pods_GithubTestProject.framework */; };
@@ -67,6 +68,7 @@
 		17CFE557218734A5006E5063 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		17CFE558218734A5006E5063 /* SigninViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SigninViewController.xib; sourceTree = "<group>"; };
 		17CFE55B218734BD006E5063 /* SigninViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewModel.swift; sourceTree = "<group>"; };
+		17D32FAF2187896F001C322C /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		17E828DD218750C100C7804A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		17E828DF218750DC00C7804A /* Plan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plan.swift; sourceTree = "<group>"; };
 		3F08E85A7F44441382D7AA98 /* Pods-GithubTestProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubTestProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GithubTestProject/Pods-GithubTestProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 		176EC4FC2186FD21001BC3C2 /* GithubTestProject */ = {
 			isa = PBXGroup;
 			children = (
+				17D32FAE2187895C001C322C /* Utilities */,
 				17CFE54621871495006E5063 /* API */,
 				17CFE53D21870AB9006E5063 /* ViewModel */,
 				17CFE53C21870AB2006E5063 /* Model */,
@@ -178,6 +181,14 @@
 				17CFE549218714B7006E5063 /* ApiService.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		17D32FAE2187895C001C322C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				17D32FAF2187896F001C322C /* Utilities.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		17E828DB218750A000C7804A /* Trending */ = {
@@ -375,6 +386,7 @@
 				17CFE5552187319D006E5063 /* BuiltByCollectionViewCell.swift in Sources */,
 				17CFE5432187143C006E5063 /* Trending.swift in Sources */,
 				17CFE559218734A5006E5063 /* SigninViewController.swift in Sources */,
+				17D32FB02187896F001C322C /* Utilities.swift in Sources */,
 				17CFE54C218715BF006E5063 /* TrendingViewModel.swift in Sources */,
 				17CFE548218714A5006E5063 /* ApiEndpoints.swift in Sources */,
 				176EC5002186FD21001BC3C2 /* ViewController.swift in Sources */,

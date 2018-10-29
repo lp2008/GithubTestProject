@@ -19,6 +19,7 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func logoutAction(_ sender: Any) {
+        self.popBack(3)
     }
     
     @IBOutlet weak var tableView: UITableView!
@@ -30,6 +31,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         userNameLabel.text = viewModel.user?.login
         
         cardView.layer.cornerRadius = 5
@@ -44,6 +46,15 @@ class ProfileViewController: UIViewController {
             cell.configure(viewModel: item)
             cell.selectionStyle = .none
             }.disposed(by: disposeBag)
+    }
+    
+    func popBack(_ nb: Int) {
+        if let viewControllers: [UIViewController] = self.navigationController?.viewControllers {
+            guard viewControllers.count < nb else {
+                self.navigationController?.popToViewController(viewControllers[viewControllers.count - nb], animated: true)
+                return
+            }
+        }
     }
 
 }
