@@ -10,4 +10,8 @@ import Foundation
 
 class TrendingItemViewModel {
     var trending: Trending?
+    
+    init(trending: Trending?) {
+        self.trending = trending
+    }
 }
