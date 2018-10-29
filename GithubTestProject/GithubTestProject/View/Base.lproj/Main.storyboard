@@ -34,8 +34,14 @@
                     <navigationItem key="navigationItem" id="1gZ-i0-Sfa">
                         <barButtonItem key="rightBarButtonItem" title="Sign in to Github" id="aMY-jE-T9H">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="signInGithub:" destination="BYZ-38-t0r" id="vDR-1J-xcP"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="mo6-gw-qUB" id="Dbm-gd-8M0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

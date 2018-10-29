@@ -82,8 +82,6 @@
 				17CFE53C21870AB2006E5063 /* Model */,
 				17CFE53B21870AAB006E5063 /* View */,
 				176EC4FD2186FD21001BC3C2 /* AppDelegate.swift */,
-				176EC4FF2186FD21001BC3C2 /* ViewController.swift */,
-				176EC5012186FD21001BC3C2 /* Main.storyboard */,
 				176EC5042186FD23001BC3C2 /* Assets.xcassets */,
 				176EC5062186FD23001BC3C2 /* LaunchScreen.storyboard */,
 				176EC5092186FD23001BC3C2 /* Info.plist */,
@@ -96,6 +94,8 @@
 			children = (
 				17CFE53E21870ADB006E5063 /* TrendingTableViewCell.swift */,
 				17CFE53F21870ADB006E5063 /* TrendingTableViewCell.xib */,
+				176EC4FF2186FD21001BC3C2 /* ViewController.swift */,
+				176EC5012186FD21001BC3C2 /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";

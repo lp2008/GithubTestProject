@@ -23,6 +23,12 @@ class TrendingTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        languageView.layer.masksToBounds = true
+        languageView.layer.cornerRadius = 7.5
+        starButton.layer.masksToBounds = true
+        starButton.layer.borderColor = UIColor.gray.cgColor
+        starButton.layer.borderWidth = 1
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -31,7 +37,10 @@ class TrendingTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configur(withViewModel viewModel: TrendingItemViewModel) {
+    func configure(withViewModel viewModel: TrendingItemViewModel) {
+        
+        
+        
         userNameLabel.text = viewModel.trending?.author
         descriptionLabel.text = viewModel.trending?.descriptionField
         languageLabel.text = viewModel.trending?.language

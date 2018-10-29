@@ -14,7 +14,7 @@ class TrendingViewModel {
     
     private let disposebag = DisposeBag()
     
-    var trendingItems: Variable<[TrendingItemViewModel]> = Variable([])
+    var trendingItems: Variable<[TrendingItemViewModel]> = Variable<[TrendingItemViewModel]>([])
     
     init() {
         fetchAllTrendingData()
