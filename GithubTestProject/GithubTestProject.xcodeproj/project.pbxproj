@@ -22,6 +22,9 @@
 		17CFE54E2187172F006E5063 /* TrendingItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CFE54D2187172F006E5063 /* TrendingItemViewModel.swift */; };
 		17CFE5552187319D006E5063 /* BuiltByCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CFE5532187319D006E5063 /* BuiltByCollectionViewCell.swift */; };
 		17CFE5562187319D006E5063 /* BuiltByCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17CFE5542187319D006E5063 /* BuiltByCollectionViewCell.xib */; };
+		17CFE559218734A5006E5063 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CFE557218734A5006E5063 /* SigninViewController.swift */; };
+		17CFE55A218734A5006E5063 /* SigninViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17CFE558218734A5006E5063 /* SigninViewController.xib */; };
+		17CFE55C218734BD006E5063 /* SigninViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CFE55B218734BD006E5063 /* SigninViewModel.swift */; };
 		A1445C01C57EB6B64E9A2196 /* Pods_GithubTestProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66222C41F32FBD0968492DDB /* Pods_GithubTestProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +46,9 @@
 		17CFE54D2187172F006E5063 /* TrendingItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingItemViewModel.swift; sourceTree = "<group>"; };
 		17CFE5532187319D006E5063 /* BuiltByCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuiltByCollectionViewCell.swift; sourceTree = "<group>"; };
 		17CFE5542187319D006E5063 /* BuiltByCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuiltByCollectionViewCell.xib; sourceTree = "<group>"; };
+		17CFE557218734A5006E5063 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
+		17CFE558218734A5006E5063 /* SigninViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SigninViewController.xib; sourceTree = "<group>"; };
+		17CFE55B218734BD006E5063 /* SigninViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewModel.swift; sourceTree = "<group>"; };
 		3F08E85A7F44441382D7AA98 /* Pods-GithubTestProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubTestProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GithubTestProject/Pods-GithubTestProject.debug.xcconfig"; sourceTree = "<group>"; };
 		66222C41F32FBD0968492DDB /* Pods_GithubTestProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubTestProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE0A9BE39555EF122E044427 /* Pods-GithubTestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubTestProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-GithubTestProject/Pods-GithubTestProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -102,6 +108,8 @@
 				176EC5012186FD21001BC3C2 /* Main.storyboard */,
 				17CFE5532187319D006E5063 /* BuiltByCollectionViewCell.swift */,
 				17CFE5542187319D006E5063 /* BuiltByCollectionViewCell.xib */,
+				17CFE557218734A5006E5063 /* SigninViewController.swift */,
+				17CFE558218734A5006E5063 /* SigninViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -120,6 +128,7 @@
 			children = (
 				17CFE54B218715BF006E5063 /* TrendingViewModel.swift */,
 				17CFE54D2187172F006E5063 /* TrendingItemViewModel.swift */,
+				17CFE55B218734BD006E5063 /* SigninViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -210,6 +219,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17CFE55A218734A5006E5063 /* SigninViewController.xib in Resources */,
 				17CFE54121870ADB006E5063 /* TrendingTableViewCell.xib in Resources */,
 				17CFE5562187319D006E5063 /* BuiltByCollectionViewCell.xib in Resources */,
 				176EC5082186FD23001BC3C2 /* LaunchScreen.storyboard in Resources */,
@@ -276,8 +286,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17CFE55C218734BD006E5063 /* SigninViewModel.swift in Sources */,
 				17CFE5552187319D006E5063 /* BuiltByCollectionViewCell.swift in Sources */,
 				17CFE5432187143C006E5063 /* Trending.swift in Sources */,
+				17CFE559218734A5006E5063 /* SigninViewController.swift in Sources */,
 				17CFE54C218715BF006E5063 /* TrendingViewModel.swift in Sources */,
 				17CFE548218714A5006E5063 /* ApiEndpoints.swift in Sources */,
 				176EC5002186FD21001BC3C2 /* ViewController.swift in Sources */,
