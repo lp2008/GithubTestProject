@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import SVProgressHUD
 
 class SigninViewController: UIViewController {
 
@@ -49,13 +50,16 @@ class SigninViewController: UIViewController {
             }).disposed(by: disposeBag)
         
         (signinButton.rx.tap).bind(onNext: {
+            SVProgressHUD.show()
             let submitObservable = self.viewModel.submit()
             submitObservable.subscribe(onNext: { (user) in
                 let viewController = ProfileViewController()
                 viewController.viewModel = self.viewModel.getProfileViewModel()
+                SVProgressHUD.dismiss()
                 self.navigationController?.pushViewController(viewController, animated: true)
             }, onError: { (error) in
                 print("SignUPViewController => Request failed with error.")
+                SVProgressHUD.dismiss()
             }, onCompleted: {
                 print("SignUPViewController => Request Completed.")
             }, onDisposed: {
