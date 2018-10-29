@@ -11,6 +11,21 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BattlePageViewController" customModule="GithubTestProject" customModuleProvider="target">
             <connections>
+                <outlet property="player1ImageView" destination="Msp-zS-EXJ" id="IkG-uE-4Ex"/>
+                <outlet property="player1Info" destination="Qy0-E6-Otz" id="vVI-vM-mxm"/>
+                <outlet property="player1ProfileView" destination="thl-gJ-mea" id="ucz-g4-alj"/>
+                <outlet property="player1ResetButton" destination="BpD-hi-U0y" id="CXk-hu-8aZ"/>
+                <outlet property="player1Submit" destination="cA5-hm-hfY" id="c0P-Tt-b47"/>
+                <outlet property="player1TextField" destination="Ltn-ek-eI2" id="cJX-sf-HTL"/>
+                <outlet property="player2ImageView" destination="61F-Fx-aKu" id="vKz-QV-2dd"/>
+                <outlet property="player2Info" destination="y9T-wk-B65" id="MTQ-Tm-MNh"/>
+                <outlet property="player2ProfileView" destination="3Zn-MM-Wb9" id="PTW-nY-edb"/>
+                <outlet property="player2ResetButton" destination="Fc1-77-boI" id="cga-83-nPn"/>
+                <outlet property="player2Submit" destination="4aB-2w-s1k" id="BWK-xt-Ihy"/>
+                <outlet property="player2TextField" destination="WzM-9g-bHF" id="323-Jx-Ouc"/>
+                <outlet property="player2View" destination="Hiz-RQ-xuf" id="OCT-3q-dqJ"/>
+                <outlet property="submitButton" destination="31X-iE-lsE" id="PMJ-oS-Y5N"/>
+                <outlet property="user1View" destination="Fxd-8H-WbZ" id="51c-Oc-ABP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -79,6 +94,9 @@
                                     <state key="normal" title="Reset">
                                         <color key="titleColor" red="0.95538729430000002" green="0.14385318759999999" blue="0.24568936229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
+                                    <connections>
+                                        <action selector="player1ResetAction:" destination="-1" eventType="touchUpInside" id="lhY-xU-IYC"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -151,6 +169,9 @@
                                     <state key="normal" title="Reset">
                                         <color key="titleColor" red="0.95538729430000002" green="0.14385318759999999" blue="0.24568936229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
+                                    <connections>
+                                        <action selector="player2ResetAction:" destination="-1" eventType="touchUpInside" id="5gN-Rl-nZZ"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
