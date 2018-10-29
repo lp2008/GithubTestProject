@@ -39,9 +39,12 @@ class TrendingTableViewCell: UITableViewCell {
     
     func configure(withViewModel viewModel: TrendingItemViewModel) {
         
-        
-        
-        userNameLabel.text = viewModel.trending?.author
+        if let author = viewModel.trending?.author, let name = viewModel.trending?.name {
+            let combination = NSMutableAttributedString()
+            combination.append(NSAttributedString(string: "\(author) / ", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 17), NSAttributedString.Key.foregroundColor: UIColor.blue]))
+            combination.append(NSAttributedString(string: name, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.semibold), NSAttributedString.Key.foregroundColor: UIColor.blue]))
+            userNameLabel.attributedText = combination
+        }
         descriptionLabel.text = viewModel.trending?.descriptionField
         languageLabel.text = viewModel.trending?.language
         numberOfStarsLabel.text = "\(viewModel.trending?.stars ?? 0)"
