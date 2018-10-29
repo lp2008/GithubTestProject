@@ -13,6 +13,7 @@ import ObjectMapper
 class SigninViewModel {
     
     private let disposeBag = DisposeBag()
+    private var user: User?
     
     var userNameText = Variable<String>("")
     var passwordText = Variable<String>("")
@@ -31,11 +32,11 @@ class SigninViewModel {
         return Observable.create({ (observer) -> Disposable in
             let signupObservable = ApiService.sharedInstance.getLoginDataFromServer(userName: self.userNameText.value, password: self.passwordText.value)
             signupObservable.subscribe(onNext: { (anyResponse) in
-                let user = Mapper<User>().map(JSONObject: anyResponse)
+                self.user = Mapper<User>().map(JSONObject: anyResponse)
                 
                 print("SignupViewModel => Request Success")
                 
-                observer.onNext(user)
+                observer.onNext(self.user)
                 observer.onCompleted()
             }, onError: { (error) in
                 print("SignupViewModel => Request failed with error.")
@@ -49,6 +50,10 @@ class SigninViewModel {
                 
             }
         })
+    }
+    
+    func getProfileViewModel() -> ProfileViewModel {
+        return ProfileViewModel(user: self.user)
     }
 }
 

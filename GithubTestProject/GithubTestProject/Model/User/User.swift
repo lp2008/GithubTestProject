@@ -32,7 +32,7 @@ class User : NSObject, NSCoding, Mappable{
     var id : Int?
     var location : AnyObject?
     var login : String?
-    var name : AnyObject?
+    var name : String?
     var nodeId : String?
     var organizationsUrl : String?
     var ownedPrivateRepos : Int?
@@ -127,7 +127,7 @@ class User : NSObject, NSCoding, Mappable{
         id = aDecoder.decodeObject(forKey: "id") as? Int
         location = aDecoder.decodeObject(forKey: "location") as? AnyObject
         login = aDecoder.decodeObject(forKey: "login") as? String
-        name = aDecoder.decodeObject(forKey: "name") as? AnyObject
+        name = aDecoder.decodeObject(forKey: "name") as? String
         nodeId = aDecoder.decodeObject(forKey: "node_id") as? String
         organizationsUrl = aDecoder.decodeObject(forKey: "organizations_url") as? String
         ownedPrivateRepos = aDecoder.decodeObject(forKey: "owned_private_repos") as? Int

@@ -13,6 +13,8 @@
 		1768396921875B4D00143D14 /* RepoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1768396821875B4D00143D14 /* RepoViewModel.swift */; };
 		1768396C21875B9100143D14 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1768396B21875B9100143D14 /* Repo.swift */; };
 		1768396E21875BB800143D14 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1768396D21875BB800143D14 /* Owner.swift */; };
+		1768397121875E0C00143D14 /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1768396F21875E0C00143D14 /* RepoTableViewCell.swift */; };
+		1768397221875E0C00143D14 /* RepoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1768397021875E0C00143D14 /* RepoTableViewCell.xib */; };
 		176EC4FE2186FD21001BC3C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176EC4FD2186FD21001BC3C2 /* AppDelegate.swift */; };
 		176EC5002186FD21001BC3C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176EC4FF2186FD21001BC3C2 /* ViewController.swift */; };
 		176EC5032186FD21001BC3C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 176EC5012186FD21001BC3C2 /* Main.storyboard */; };
@@ -43,6 +45,8 @@
 		1768396821875B4D00143D14 /* RepoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewModel.swift; sourceTree = "<group>"; };
 		1768396B21875B9100143D14 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		1768396D21875BB800143D14 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		1768396F21875E0C00143D14 /* RepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
+		1768397021875E0C00143D14 /* RepoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoTableViewCell.xib; sourceTree = "<group>"; };
 		176EC4FA2186FD21001BC3C2 /* GithubTestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubTestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		176EC4FD2186FD21001BC3C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		176EC4FF2186FD21001BC3C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 			children = (
 				17683962218758BB00143D14 /* ProfileViewController.swift */,
 				17683963218758BB00143D14 /* ProfileViewController.xib */,
+				1768396F21875E0C00143D14 /* RepoTableViewCell.swift */,
+				1768397021875E0C00143D14 /* RepoTableViewCell.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -298,6 +304,7 @@
 				176EC5082186FD23001BC3C2 /* LaunchScreen.storyboard in Resources */,
 				176EC5052186FD23001BC3C2 /* Assets.xcassets in Resources */,
 				176EC5032186FD21001BC3C2 /* Main.storyboard in Resources */,
+				1768397221875E0C00143D14 /* RepoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +369,7 @@
 				1768396E21875BB800143D14 /* Owner.swift in Sources */,
 				17E828DE218750C100C7804A /* User.swift in Sources */,
 				17CFE55C218734BD006E5063 /* SigninViewModel.swift in Sources */,
+				1768397121875E0C00143D14 /* RepoTableViewCell.swift in Sources */,
 				17E828E0218750DC00C7804A /* Plan.swift in Sources */,
 				1768396C21875B9100143D14 /* Repo.swift in Sources */,
 				17CFE5552187319D006E5063 /* BuiltByCollectionViewCell.swift in Sources */,

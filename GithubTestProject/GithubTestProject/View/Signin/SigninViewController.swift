@@ -51,8 +51,9 @@ class SigninViewController: UIViewController {
         (signinButton.rx.tap).bind(onNext: {
             let submitObservable = self.viewModel.submit()
             submitObservable.subscribe(onNext: { (user) in
-                print(user?.url ?? "")
-                //self.navigationController?.pushViewController(TabBarViewController(), animated: true)
+                let viewController = ProfileViewController()
+                viewController.viewModel = self.viewModel.getProfileViewModel()
+                self.navigationController?.pushViewController(viewController, animated: true)
             }, onError: { (error) in
                 print("SignUPViewController => Request failed with error.")
             }, onCompleted: {
