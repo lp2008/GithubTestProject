@@ -34,6 +34,8 @@
 		17CFE55A218734A5006E5063 /* SigninViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17CFE558218734A5006E5063 /* SigninViewController.xib */; };
 		17CFE55C218734BD006E5063 /* SigninViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CFE55B218734BD006E5063 /* SigninViewModel.swift */; };
 		17D32FB02187896F001C322C /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D32FAF2187896F001C322C /* Utilities.swift */; };
+		17D32FB421878BA3001C322C /* BattlePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D32FB221878BA3001C322C /* BattlePageViewController.swift */; };
+		17D32FB521878BA3001C322C /* BattlePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17D32FB321878BA3001C322C /* BattlePageViewController.xib */; };
 		17E828DE218750C100C7804A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E828DD218750C100C7804A /* User.swift */; };
 		17E828E0218750DC00C7804A /* Plan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E828DF218750DC00C7804A /* Plan.swift */; };
 		A1445C01C57EB6B64E9A2196 /* Pods_GithubTestProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66222C41F32FBD0968492DDB /* Pods_GithubTestProject.framework */; };
@@ -69,6 +71,8 @@
 		17CFE558218734A5006E5063 /* SigninViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SigninViewController.xib; sourceTree = "<group>"; };
 		17CFE55B218734BD006E5063 /* SigninViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewModel.swift; sourceTree = "<group>"; };
 		17D32FAF2187896F001C322C /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		17D32FB221878BA3001C322C /* BattlePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattlePageViewController.swift; sourceTree = "<group>"; };
+		17D32FB321878BA3001C322C /* BattlePageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BattlePageViewController.xib; sourceTree = "<group>"; };
 		17E828DD218750C100C7804A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		17E828DF218750DC00C7804A /* Plan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plan.swift; sourceTree = "<group>"; };
 		3F08E85A7F44441382D7AA98 /* Pods-GithubTestProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubTestProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GithubTestProject/Pods-GithubTestProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 		17CFE53B21870AAB006E5063 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				17D32FB121878B79001C322C /* Battle */,
 				176839612187589B00143D14 /* Profile */,
 				17E828E2218750F600C7804A /* Signin */,
 				17E828E1218750E400C7804A /* Trending */,
@@ -189,6 +194,15 @@
 				17D32FAF2187896F001C322C /* Utilities.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		17D32FB121878B79001C322C /* Battle */ = {
+			isa = PBXGroup;
+			children = (
+				17D32FB221878BA3001C322C /* BattlePageViewController.swift */,
+				17D32FB321878BA3001C322C /* BattlePageViewController.xib */,
+			);
+			path = Battle;
 			sourceTree = "<group>";
 		};
 		17E828DB218750A000C7804A /* Trending */ = {
@@ -308,6 +322,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17D32FB521878BA3001C322C /* BattlePageViewController.xib in Resources */,
 				17683965218758BB00143D14 /* ProfileViewController.xib in Resources */,
 				17CFE55A218734A5006E5063 /* SigninViewController.xib in Resources */,
 				17CFE54121870ADB006E5063 /* TrendingTableViewCell.xib in Resources */,
@@ -398,6 +413,7 @@
 				17CFE54A218714B7006E5063 /* ApiService.swift in Sources */,
 				1768396721875AEC00143D14 /* ProfileViewModel.swift in Sources */,
 				17CFE54521871450006E5063 /* BuiltBy.swift in Sources */,
+				17D32FB421878BA3001C322C /* BattlePageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
