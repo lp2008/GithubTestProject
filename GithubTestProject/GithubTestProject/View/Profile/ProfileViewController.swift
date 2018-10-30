@@ -16,6 +16,9 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var cardView: UIView!
     
     @IBAction func battleButtonAction(_ sender: Any) {
+        let battleVC = BattlePageViewController()
+        battleVC.viewModel = BattlePageViewModel(user: viewModel.user)
+        self.navigationController?.pushViewController(battleVC, animated: true)
     }
     
     @IBAction func logoutAction(_ sender: Any) {

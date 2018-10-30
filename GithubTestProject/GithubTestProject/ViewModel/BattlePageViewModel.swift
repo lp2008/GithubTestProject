@@ -14,14 +14,17 @@ class BattlePageViewModel {
     
     let disposeBag = DisposeBag()
     
+    var user: User?
     var player1: User?
     var player2: User?
     
     var player1Text = Variable<String>("")
     var player2Text = Variable<String>("")
+    var player1Score = 0
+    var player2Score = 0
     
-    init() {
-        
+    init(user: User?) {
+       self.user = user
     }
     
     func submit(isPlayer1: Bool) -> Observable<Bool>  {
@@ -61,33 +64,20 @@ class BattlePageViewModel {
     }
     
     func calculateBattleResult() -> Bool {
-        var player1RepoCount = 0
-        var player1FollowersCount = 0
-        
-        var player2RepoCount = 0
-        var player2FollowersCount = 0
         
         if let player = player1 {
-            if let value = player.publicRepos {
-                player1RepoCount = value
-            }
-            
             if let value = player.followers {
-                player1FollowersCount = value
+                player1Score = 3 * value
             }
         }
         
         if let player = player2 {
-            if let value = player.publicRepos {
-                player2RepoCount = value
-            }
-            
             if let value = player.followers {
-                player2FollowersCount = value
+                player2Score = 3 * value
             }
         }
         
-        if (player1RepoCount + player1FollowersCount) > (player2RepoCount + player2FollowersCount) {
+        if player1Score > player2Score {
             return true
         }
         

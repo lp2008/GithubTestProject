@@ -19,6 +19,10 @@ class BattlePageViewController: UIViewController {
     @IBOutlet weak var player1ProfileView: UIView!
     @IBOutlet weak var player1ImageView: UIImageView!
     @IBOutlet weak var player1ResetButton: UIButton!
+    @IBOutlet weak var player1Result: UILabel!
+    @IBOutlet weak var player1Score: UILabel!
+    @IBOutlet weak var player1Name: UILabel!
+    @IBOutlet weak var player2Name: UILabel!
     
     @IBAction func player1ResetAction(_ sender: Any) {
         player1TextField.text = ""
@@ -43,6 +47,8 @@ class BattlePageViewController: UIViewController {
     @IBOutlet weak var player2ProfileView: UIView!
     @IBOutlet weak var player2ImageView: UIImageView!
     @IBOutlet weak var player2ResetButton: UIButton!
+    @IBOutlet weak var player2Result: UILabel!
+    @IBOutlet weak var player2Score: UILabel!
     
     //Other Outlet
     @IBOutlet weak var submitButton: UIButton!
@@ -50,17 +56,16 @@ class BattlePageViewController: UIViewController {
     @IBOutlet weak var player2Info: UILabel!
     
     private let disposeBag = DisposeBag()
-    private var viewModel = BattlePageViewModel()
+    var viewModel: BattlePageViewModel!
     private var tempCount = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        player1ProfileView.isHidden = true
-        player2ProfileView.isHidden = true
-        submitButton.isHidden = true
-        player1Info.isHidden = true
-        player2Info.isHidden = true
+    
+        setupView()
+        let compare = UIBarButtonItem(title: "Compare", style: .plain, target: self, action: #selector(compareTapped))
+        let Battle = UIBarButtonItem(title: "Battle", style: .plain, target: self, action: #selector(battleTapped))
+        navigationItem.rightBarButtonItems = [Battle, compare]
         submitButton.addTarget(self, action: #selector(submitClick), for: .touchUpInside)
         
         _ = player1TextField.rx.text.map { $0 ?? "" }.bind(to: viewModel.player1Text)
@@ -73,6 +78,7 @@ class BattlePageViewController: UIViewController {
                 if isSuccess {
                     self.tempCount = self.tempCount + 1
                     self.player1ProfileView.isHidden = false
+                    self.player1Name.text = self.viewModel.player1?.login
                     if let avatar = self.viewModel.player1?.avatarUrl {
                         let url = URL(string: avatar)
                         self.player1ImageView.kf.setImage(with: url)
@@ -99,6 +105,7 @@ class BattlePageViewController: UIViewController {
                 if isSuccess {
                     self.tempCount = self.tempCount + 1
                     self.player2ProfileView.isHidden = false
+                    self.player2Name.text = self.viewModel.player2?.login
                     if let avatar = self.viewModel.player2?.avatarUrl {
                         let url = URL(string: avatar)
                         self.player2ImageView.kf.setImage(with: url)
@@ -120,11 +127,49 @@ class BattlePageViewController: UIViewController {
         }).disposed(by: disposeBag)
     }
     
+    @objc private func compareTapped() {
+        self.viewModel.player1 = viewModel.user
+        self.tempCount = self.tempCount + 1
+        self.player1ProfileView.isHidden = false
+        self.player1Name.text = self.viewModel.player1?.login
+        if let avatar = self.viewModel.player1?.avatarUrl {
+            let url = URL(string: avatar)
+            self.player1ImageView.kf.setImage(with: url)
+        }
+        
+        if self.tempCount == 2 {
+            self.submitButton.isHidden = false
+        }
+    }
+    
+    @objc private func battleTapped() {
+        player1TextField.text = ""
+        viewModel.player1 = nil
+        tempCount = 0
+        player2TextField.text = ""
+        viewModel.player2 = nil
+        setupView()
+    }
+    
+    private func setupView() {
+        player1ProfileView.isHidden = true
+        player2ProfileView.isHidden = true
+        submitButton.isHidden = true
+        player1Info.isHidden = true
+        player2Info.isHidden = true
+        player1Result.isHidden = true
+        player2Result.isHidden = true
+        player1Score.isHidden = true
+        player2Score.isHidden = true
+    }
+    
     @objc private func submitClick() {
         if viewModel.calculateBattleResult() {
-            print("Player1 Winner")
+            player1Result.text = "Winner"
+            player2Result.text = "Loser"
         } else {
-            print("Player2 Winner")
+            player1Result.text = "Loser"
+            player2Result.text = "Winner"
         }
         updateView()
     }
@@ -135,6 +180,12 @@ class BattlePageViewController: UIViewController {
         self.submitButton.isHidden = true
         self.player1Info.isHidden = false
         self.player2Info.isHidden = false
+        player1Score.text = "Score: \(viewModel.player1Score)"
+        player2Score.text = "Score: \(viewModel.player2Score)"
+        player1Result.isHidden = false
+        player2Result.isHidden = false
+        player1Score.isHidden = false
+        player2Score.isHidden = false
     }
 
 }

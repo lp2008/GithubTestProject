@@ -19,8 +19,7 @@ class ViewController: UIViewController {
     
     let disposeBag = DisposeBag()
     @IBAction func signInGithub(_ sender: Any) {
-        //self.navigationController?.pushViewController(SigninViewController(), animated: true)
-        self.navigationController?.pushViewController(BattlePageViewController(), animated: true)
+        self.navigationController?.pushViewController(SigninViewController(), animated: true)
     }
     
     override func viewDidLoad() {
